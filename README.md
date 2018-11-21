@@ -1,7 +1,7 @@
 
 # KazNLP: NLP tools for Kazakh language
 
-This project aims at building free/open source language processing tools for [Kazakah](https://en.wikipedia.org/wiki/Kazakh_language).
+This project aims at building free/open source language processing tools for [Kazakh](https://en.wikipedia.org/wiki/Kazakh_language).
 The proposed set of tools is designed to tackle a wide range of NLP problems that can be divided into pre-processing, core processing, and application-level routines.
 It is expected that the tools will be implemented in [Python 3](https://www.python.org/) programming language and released under [CC-SA-BY](https://creativecommons.org/licenses/by-sa/4.0/) or compatible licenses.
 
@@ -30,7 +30,7 @@ _**to be released in 2020**_
 
 
 If you would like to cite the project in your research or elsewhere, for now, please, cite individual tools separately, using corresponding citing instructions.
-A single paper, describing the toolkit as a whole is comming soon...
+A single paper, describing the toolkit as a whole is coming soon...
 
 
 <hr>
@@ -89,7 +89,7 @@ To check, if everything is working, you can run this test code like so:
 This should generate a lengthy output, which will be discussed in the _usage example_ sections with respect to each tool.
 For now, just make sure that there are no error messages.
 
-If you encountered problems with the above command, make sure that tyou are using `Python 3.6` or a higher version.
+If you encountered problems with the above command, make sure that you are using `Python 3.6` or a higher version.
 
 
 
@@ -116,7 +116,7 @@ Our approach amounts to application of the following straightforward procedures:
 * _homoglyph resolution_ - given a mixed script word (i.e. a word with Latin + Cyrillic letters) tries to convert it to a single script token by making apropriate substitutions for homoglyphs;
 * _transliteration (optional)_ - translates symbols of the Latin alphabet and national symbols of the Kazakh Cyrillic alphabet into Russian Cyrillic, in our opinion, a common denominator for the three alphabets used in the Kazakh-Russian environment. See \[1\] for details;
 * _desegmentation (optional)_ - joins space-separated segmented words, e.g. "L O V E" becomes "LOVE";
-* _deduplication (optional)_ - collapses consecutive occurances of the same character, e.g. "yesss" becomes "yes";
+* _deduplication (optional)_ - collapses consecutive occurrences of the same character, e.g. "yesss" becomes "yes";
 * _emoji resolution (optional)_ - replaces emojies with their official Unicode descriptions, e.g. ☺ becomes "&lt;emj&gt;smilingface&lt;/emj&gt;".
 
 
@@ -138,7 +138,7 @@ ininormer = Normalizer()
 # by default only cleaning and script fixing is performed
 # returns a tuple: normalized text (a string) and stats (a dictionary)
 # the stats dictionary has the following structure:
-# stats = {'cleaned': number of "noisy" characers either deleted or replaced,
+# stats = {'cleaned': number of "noisy" characters either deleted or replaced,
 #          'l2c':number of mix-scripted words converted to all-cyrillic script,
 #          'c2l':number of mix-scripted words converted to all-latin script};
 
@@ -146,7 +146,7 @@ ininormer = Normalizer()
 print(f'Normalized text: {norm_txt.rjust(39)}')
 print(f'Normalization stats: {stats}')
 
-# stats can be ommited by setting [stats] flag to False
+# stats can be omitted by setting [stats] flag to False
 # in that case a single string is returned (not a tuple)
 norm_txt = ininormer.normalize(txt, stats=False)
 
@@ -167,7 +167,7 @@ print(f'Normalized text: {norm_txt.rjust(39)}\t(len: {len(norm_txt)}; vocab (cha
 
 
 ```python
-# let's get rid of segmented words and duplicate chracters
+# let's get rid of segmented words and duplicate characters
 # through the desegment parameter we set the length of space-separated single letter sequences
 # beyond which they will be joined together ("L O V E" in our example is such a sequence of length 4)
 # through the dedupe parameter we set the length of repeated character sequences
@@ -323,10 +323,10 @@ LID for individual words or phrases has also gained importance.
 We approach the task as a closed class LID, where we consider two languages: Kazakh and Russian,
 and a catch-all category "other" for any other language.
 To this end we train two Naive Bayes models that differ only in feature representation:
-where one uses word ngrams as features, the other employs character ngrams for the same purpose.
+where one uses word N-grams as features, the other employs character N-grams for the same purpose.
 
 
-Our implementation allows for both separate and combined application of the aformentioned models, 
+Our implementation allows for both separate and combined application of the aforementioned models, 
 as well as for both document- and word-level LID.
 For the details, please, consult \[3\].
 
@@ -356,7 +356,7 @@ landetector = LidNB(word_mdl=None, char_mdl=cmdl)
 
 # to obtain document-level predictions we call the predict method
 # the method expects a list of lowercased tokens
-# as tokens do not have to be grouped by sentences, we use a regex tokenizer
+# as tokens do not have to be grouped by s  entences, we use a regex tokenizer
 doclan = landetector.predict(tokrex.tokenize(txt_kaz, lower=True)[0])
 print(f'Document "{txt_kaz}" is written in {doclan}.')
 ```
@@ -379,7 +379,7 @@ print(f'Document "{txt_rus}" has the following language probabilities:\n{doclan}
 
 
 ```python
-# finaly we can try out word-level LID on a multi-lingual document
+# finally we can try out word-level LID on a multi-lingual document
 print(f'Input document is multi-lingual:\n"{txt_kaz} {txt_rus}".')
 print('\nPer-word language detection:')
 for i, wrd in enumerate(tokrex.tokenize(txt_kaz + txt_rus)[0]):
@@ -441,7 +441,7 @@ Arguably the most common approach to MP is a two-step pipeline,
 where given a word and its context the first step is to 
 find all possible morphological representations (analyses) of that word
 and the second is to chose the analysis most appropriate in the given context.
-This is usially achieved by a successive application of such tools as 
+This is usually achieved by a successive application of such tools as 
 morphological analyzers and morphological disambiguators or taggers.
 
 
