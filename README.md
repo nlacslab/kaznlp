@@ -35,7 +35,7 @@ A single paper, describing the toolkit as a whole is coming soon...
 
 The project is implemented by the computer science lab of the National Laboratory Astana, Nazarbayev University.
 
-Contact info: past the following code [here](https://www.python.org/shell/)
+Contact info: figure out or run the following code (need python 3.6+ or [online interpreter](https://www.python.org/shell/))
 ```python
 frst_name = 'Aibek'
 last_name = 'Makazhanov'
