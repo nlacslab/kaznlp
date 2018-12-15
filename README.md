@@ -7,7 +7,7 @@ It is expected that the tools will be implemented in [Python 3](https://www.pyth
 
 The following is the complete list of proposed tools together with their scheduled release dates:
 
-_**to be released in 2018**_
+_**released in 2018**_
 * Initial normalization module;
 * Tokenizers;
 * Language detector;
@@ -32,6 +32,16 @@ _**to be released in 2020**_
 If you would like to cite the project in your research or elsewhere, for now, please, cite individual tools separately, using corresponding citing instructions.
 A single paper, describing the toolkit as a whole is coming soon...
 
+
+The project is implemented by the computer science lab of the National Laboratory Astana, Nazarbayev University.
+
+Contact info: past the following code [here](https://www.python.org/shell/)
+```python
+frst_name = 'Aibek'
+last_name = 'Makazhanov'
+sep1, sep2 = '.', '@'
+print(f'\n{frst_name.lower()}{sep1}{last_name.lower()}{sep2}nu{sep1}edu{sep1}kz\n')
+```
 
 <hr>
 
