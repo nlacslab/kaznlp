@@ -23,8 +23,9 @@ R_ELK	Imitative
 R_SYM	Symbol (#, $, +, etc.)
 R_BOS	Foreign word
 R_X	Un-analyzed
-* special action verbs (жатыр, отыр, тұр, жүр) are considered as a separate category, because only they can receive agreement markers being in a base form, i.e. жатыр/отыр/тұр/жүр + мын/мін/сың/сің... is possible, but же + мін (or any other verb and agreement marker) is impossible directly, there has to be something in between, e.g. же + й + мін, же + р + мін, же + ме + й + сің, etc.
 ```
+\* special action verbs (жатыр, отыр, тұр, жүр) are considered as a separate category, because only they can receive agreement markers being in a base form, i.e. жатыр/отыр/тұр/жүр + мын/мін/сың/сің... is possible, but же + мін (or any other verb and agreement marker) is impossible directly, there has to be something in between, e.g. же + й + мін, же + р + мін, же + ме + й + сің, etc.
+
 
 ```
 = punctuation =
@@ -47,9 +48,9 @@ R_BSLH	\
 
 ```
 = non-transitional morphemes =
-N1	plural
+N1	plural (көптік жалғау)
 N1S	plural, after possessive, e.g. мама_R_ZE м_S1 дар_N1S
-S1	possessive, first singular
+S1	possessive  (тәуелдік жалғау), first singular (1-ші жақ, жекеше)
 S2	possessive, second singular
 S3	possessive, third singular/plural
 S4	possessive, second singular, formal
@@ -78,7 +79,7 @@ T1	aorist (ауыспалы осы/келер шақ)
 T2	future tense (болжамды/мақсатты келер шақ)
 T3	past tense (жедел/бұрынғы өткен шақ)
 T3E	past tense, modified after е_R_ET (e.g., е_R_ET т_T3E)
-P1	agreement, 1st singular
+P1	agreement (жіктік жалғау), 1st singular (1-ші жақ, жекеше)
 P2	agreement, 2nd singular
 P3	agreement, 3rd singular
 P4	agreement, 2nd singular, formal
