@@ -1,0 +1,109 @@
+This is version 0.1 of the annotated sub-corpus of the KLC (Kazakh Language Corpus: http://kazcorpus.kz/klcweb/en/). The current release includes 49054 annotated sentences (682153 tokens). The following provides: (a) licensing information; (b) citation information; (c) data set format; (d) tagset description.
+Contact Aibek Makazhanov (aibek.makazhanov@nu.edu.kz) should you have questions regarding this release.
+
+=== License ===
+This work is licensed under CC-BY-NC-ND 4.0 license (https://creativecommons.org/licenses/by-nc-nd/4.0/), which permits non-commercial use and unmodified redistribution.
+© National Laboratory Astana, Nazarbayev University, 2017.
+
+=== How to cite ===
+Please, use the citation.bib file included in the distribution to cite using BibTex and/or LaTex.
+Alternatively use the following reference:
+Makhambetov, O., Makazhanov, A., Yessenbayev, Z., Matkarimov, B., Sabyrgaliyev, I., Sharafudinov, A. Assembling the Kazakh Language Corpus. 2013. In Proceedings of EMNLP, p. 1022-1031.
+
+=== Format ===
+The data is stored and distributed in a plain text format. Each sentence is preceded by a line that shows its ordinal number (starting with a hash sign) and succeeded by an empty line. Sentences are formatted as three-column (tab separated) tables, where rows correspond to tokens. For each token from left to right the columns contain the following info: (1) ordinal number (in a sentence); (2) surface form; (3) analysis.
+For example, sentence #25743 (Мақұл.) has only two tokens:
+#25743
+1	Мақұл	Мақұл_R_OS
+2	.	._R_NKT
+The analyses contain surface forms (un-normalized) of all overt morphemes labeled accordingly; covert morphemes (grammemes) are ignored.
+
+=== Tag set ===
+The tag set employed in this release is a rather simple one, that gives up a lot of grammatical nuance for the sake of clarity and easier (faster) tagging. For example, no distinction is made between pronouns and determiners, copulas are not acknowledged, time-aspect-mood continuum is simplified to the extent possible, etc.
+
+= POS tags =
+R_ZE	Noun, common
+R_ZEQ	Noun, personal
+R_ET	Verb
+R_ETK	Verb, auxiliary
+R_ETP	Verb, special action* (жатыр, отыр, тұр, жүр)
+R_ETPK	Verb, special action, auxiliary
+R_ETB	Verb, negative (жоқ, емес only, e.g. барған жоқ)
+R_SE	Adjective
+R_SIM	Pronoun
+R_US	Adverb
+R_ZHL	Conjunct (both coordinating and subordinating)
+R_SN	Numeral
+R_SH	Adposition / Particle
+R_MOD	Modal word
+R_OS	Interjection
+R_ELK	Imitative
+R_SYM	Symbol (#, $, +, etc.)
+R_BOS	Foreign word
+R_X	Un-analyzed
+* special action verbs (жатыр, отыр, тұр, жүр) are considered as a separate category, because only they can receive agreement markers being in a base form, i.e. жатыр/отыр/тұр/жүр + мын/мін/сың/сің... is possible, but же + мін (or any other verb and agreement marker) is impossible directly, there has to be something in between, e.g. же + й + мін, же + р + мін, же + ме + й + сің, etc.
+
+= punctuation =
+R_NKT	.
+R_UTR	,
+R_DPH	-
+R_ATRN	«
+R_ZTRN	»
+R_TRN	"
+R_QNKT	:
+R_SUR	?
+R_AZZ	(
+R_ZZZ	)
+R_LEP	!
+R_UNKT	;
+R_SLH	/
+R_APS	'
+R_BSLH	\
+
+= non-transitional morphemes =
+N1	plural
+N1S	plural, after possessive, e.g. мама_R_ZE м_S1 дар_N1S
+S1	possessive, first singular
+S2	possessive, second singular
+S3	possessive, third singular/plural
+S4	possessive, second singular, formal
+S5	possessive, first plural
+S9	possessive, special (-ныкі, -дыкі, -тыкі)
+S3SIM	possessive, third singular/plural, after pronouns
+C2	genitive case (ілік септік)
+C3	dative case (барыс септік)
+C4	accusative case (табыс септік)
+C5	locative case (жатыс септік)
+C6	ablative case (шығыс септік)
+C7	instrumental case (көмектес септік)
+LATT	locative-attributive (-дағы, -дегі, -тағы, -тегі)
+SML	similative (-дай, -дей, -тай, -тей)
+ABE	abessive (-сыз, -сіз)
+EQU	equative (-ша, -ше, e.g. балаша)
+CMP	comparative, (adjectives and adverbs)
+V1	reflexive voice (өздік етіс)
+V2	passive voice (ортақ етіс)
+V3	cooperative voice (өздік етіс)
+V4	causative voice (өзгелік етіс)
+M2	imperative mood (бұйрық рай)
+M3	desiderative mood (қалау рай)
+M4	conditional mood (шартты рай)
+T1	aorist (ауыспалы осы/келер шақ)
+T2	future tense (болжамды/мақсатты келер шақ)
+T3	past tense (жедел/бұрынғы өткен шақ)
+T3E	past tense, modified after е_R_ET (e.g., е_R_ET т_T3E)
+P1	agreement, 1st singular
+P2	agreement, 2nd singular
+P3	agreement, 3rd singular
+P4	agreement, 2nd singular, formal
+P5	agreement, 1st plural
+P6	agreement, 2nd plural
+P7	agreement, 3rd plural
+P8	agreement, 2nd plural, formal
+
+= transitional morphemes =
+ET_KSE	verbal adverb, participle (көсемше)
+ET_ESM	verbal adjective, noun (есімше)
+ET_ETU	gerund (тұйық етістік)
+ET_ETB	negated verb (болымсыз етістік)
+Transitional morphemes consist of two underline-separated parts («1_2») that indicate the transition from one (pseudo-) POS to another. This concerns only transitions between types of verbs. The four basic transitions are given above and others are possible, e.g. a verb can be negated and then turned into a gerund, which results in two transitions ET_ETB and ETB_ETU. There is a total of 19 transitional morphemes, which are: ET_KSE, ET_ESM, ET_ETU, ET_ETB, ETP_KSE, ETP_ESM, ETP_ETU, ETP_ETB, ETK_KSE, ETK_ESM, ETK_ETU, ETK_ETB, ETPK_KSE, ETPK_ESM, ETPK_ETU, ETPK_ETB, ETB_KSE, ETB_ESM, ETB_ETU.
