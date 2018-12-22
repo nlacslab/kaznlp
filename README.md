@@ -542,8 +542,11 @@ for i, a in enumerate(alist):
      1) лмасын_R_X
 
 
-#### \* Here a modified version of the KLC tag set is used. For more details, please, consult \[5\].
-#### \** The currrent release contains only a porton of data used in this demonstration, thus results may differ.
+\* Here a modified version of the KLC tag set is used.
+A quick glossary can be found [here](https://github.com/nlacslab/kaznlp/blob/master/kaznlp/docs/morphology-tagset.MD).
+For more details, please, consult \[5\].
+
+\** The currrent release contains only a portion of data used in this demonstration, thus results may differ.
 
 Let us now consider the tagging example.
 
