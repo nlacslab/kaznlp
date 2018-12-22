@@ -4,25 +4,25 @@ The tag set employed in this release is a rather simple one, that gives up a lot
 
 ```
 = POS tags =
-R_ZE	Noun, common
-R_ZEQ	Noun, personal
-R_ET	Verb
-R_ETK	Verb, auxiliary
-R_ETP	Verb, special action* (жатыр, отыр, тұр, жүр)
-R_ETPK	Verb, special action, auxiliary
+R_ZE	Noun, common (жалпы есім)
+R_ZEQ	Noun, personal (жалқы есім)
+R_ET	Verb (етістік)
+R_ETK	Verb, auxiliary (көмекші етістік)
+R_ETP	Verb, special action* (арнайы етістік жатыр, отыр, тұр, жүр)
+R_ETPK	Verb, special action, auxiliary (арнайы көмекші етістік жатыр, отыр, тұр, жүр)
 R_ETB	Verb, negative (жоқ, емес only, e.g. барған жоқ)
-R_SE	Adjective
-R_SIM	Pronoun
-R_US	Adverb
-R_ZHL	Conjunct (both coordinating and subordinating)
-R_SN	Numeral
-R_SH	Adposition / Particle
-R_MOD	Modal word
-R_OS	Interjection
-R_ELK	Imitative
+R_SE	Adjective (сын есім)
+R_SIM	Pronoun (есімдік)
+R_US	Adverb (үстеу)
+R_ZHL	Conjunct (both coordinating and subordinating) - (салалас және сабаұтас жалғаулық шылаулар)
+R_SN	Numeral (сан есім)
+R_SH	Adposition / Particle (шылау, бөлшек)
+R_MOD	Modal word (модаль сөз)
+R_OS	Interjection (оқшау сөз)
+R_ELK	Imitative (еліктеуіш)
 R_SYM	Symbol (#, $, +, etc.)
-R_BOS	Foreign word
-R_X	Un-analyzed
+R_BOS	Foreign word (бөтен / шетелдік сөз)
+R_X	Un-analyzed (талданбаған)
 ```
 \* special action verbs (жатыр, отыр, тұр, жүр) are considered as a separate category, because only they can receive agreement markers being in a base form, i.e. жатыр/отыр/тұр/жүр + мын/мін/сың/сің... is possible, but же + мін (or any other verb and agreement marker) is impossible directly, there has to be something in between, e.g. же + й + мін, же + р + мін, же + ме + й + сің, etc.
 
