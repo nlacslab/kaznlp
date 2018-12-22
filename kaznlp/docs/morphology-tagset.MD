@@ -1,9 +1,11 @@
 === Tag set ===
 
+
 The tag set employed in this release is a rather simple one, that gives up a lot of grammatical nuance for the sake of clarity and easier (faster) tagging. For example, no distinction is made between pronouns and determiners, copulas are not acknowledged, time-aspect-mood continuum is simplified to the extent possible, etc.
 
-```
+
 = POS tags =
+```
 R_ZE	Noun, common (жалпы есім)
 R_ZEQ	Noun, personal (жалқы есім)
 R_ET	Verb (етістік)
@@ -27,8 +29,8 @@ R_X	Un-analyzed (талданбаған)
 \* special action verbs (жатыр, отыр, тұр, жүр) are considered as a separate category, because only they can receive agreement markers being in a base form, i.e. жатыр/отыр/тұр/жүр + мын/мін/сың/сің... is possible, but же + мін (or any other verb and agreement marker) is impossible directly, there has to be something in between, e.g. же + й + мін, же + р + мін, же + ме + й + сің, etc.
 
 
-```
 = punctuation =
+```
 R_NKT	.
 R_UTR	,
 R_DPH	-
@@ -46,8 +48,8 @@ R_APS	'
 R_BSLH	\
 ```
 
-```
 = non-transitional morphemes =
+```
 N1	plural (көптік жалғау)
 N1S	plural, after possessive, e.g. мама_R_ZE м_S1 дар_N1S
 S1	possessive  (тәуелдік жалғау), first singular (1-ші жақ, жекеше)
@@ -89,8 +91,8 @@ P7	agreement, 3rd plural
 P8	agreement, 2nd plural, formal
 ```
 
-```
 = transitional morphemes =
+```
 ET_KSE	verbal adverb, participle (көсемше)
 ET_ESM	verbal adjective, noun (есімше)
 ET_ETU	gerund (тұйық етістік)
