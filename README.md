@@ -5,29 +5,6 @@ This project aims at building free/open source language processing tools for [Ka
 The proposed set of tools is designed to tackle a wide range of NLP problems that can be divided into pre-processing, core processing, and application-level routines.
 It is expected that the tools will be implemented in [Python 3](https://www.python.org/) programming language and released under [CC-SA-BY](https://creativecommons.org/licenses/by-sa/4.0/) or compatible licenses.
 
-The following is the complete list of proposed tools together with their scheduled release dates:
-
-_**released in 2018**_
-* Initial normalization module;
-* Tokenizers;
-* Language detector;
-* Morphological analyzer;
-* Morphological tagger.
-
-_**to be released in 2019**_
-* Morphological analyzer (statistical/neural);
-* Morphological tagger (neural);
-* Dependency parser;
-* Spelling corrector;
-* Named entity recognizer;
-* Secondary normalization module.
-
-_**to be released in 2020**_
-* Dependency parser (neural);
-* Grammar corrector;
-* Named entity recognizer (neural);
-* Secondary normalization module (neural).
-
 
 If you would like to cite the project in your research or elsewhere, for now, please, cite individual tools separately, using corresponding citing instructions.
 A single paper, describing the toolkit as a whole is coming soon...
